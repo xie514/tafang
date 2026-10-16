@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>塔防游戏 - Tower Defense</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <div id="game-wrap">
+    <canvas id="game-canvas" width="960" height="640"></canvas>
+    <div id="overlay" class="hidden">
+      <div class="overlay-box">
+        <h2 id="overlay-title">暂停</h2>
+        <p id="overlay-text"></p>
+        <button id="overlay-btn">继续</button>
+      </div>
+    </div>
+  </div>
+  <aside id="sidebar">
+    <h1>塔防 TD</h1>
+    <div class="stat-row"><span>金币</span><b id="stat-gold">100</b></div>
+    <div class="stat-row"><span>基地血量</span><b id="stat-hp">20</b></div>
+    <div class="stat-row"><span>波次</span><b id="stat-wave">0</b></div>
+    <div class="stat-row"><span>剩余敌人</span><b id="stat-enemies">0</b></div>
+    <hr>
+    <div class="tower-list" id="tower-list"></div>
+    <hr>
+    <div class="controls">
+      <button id="btn-start">开始波次</button>
+      <button id="btn-pause">暂停</button>
+      <button id="btn-speed">速度 x1</button>
+      <button id="btn-reset">重开</button>
+    </div>
+    <p class="hint" id="hint">选中塔后点击草地放置。点击已放塔可查看/出售。</p>
+  </aside>
+</div>
+<script src="js/config.js"></script>
+<script src="js/grid.js"></script>
+<script src="js/entity.js"></script>
+<script src="js/tower.js"></script>
+<script src="js/enemy.js"></script>
+<script src="js/bullet.js"></script>
+<script src="js/wave.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
